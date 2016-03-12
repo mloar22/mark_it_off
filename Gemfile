@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.4'
 group :production do
   gem 'pg'
@@ -26,3 +25,4 @@ group :development, :test do
 end
 gem 'devise'
 gem 'faker'
+gem 'bootstrap-sass'
