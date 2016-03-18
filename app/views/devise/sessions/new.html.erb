@@ -1,8 +1,8 @@
 <h2> Sign in </h2>
 
-<form class="form-horizontal">
+
   <div class="col-md-4">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html_options: {class: "form-horizontal"}) do |f| %>
       <%= devise_error_messages! %>
       <div class="form-group">
         <%= f.label :email %>
@@ -25,4 +25,3 @@
       </div>
     <% end %>
   </div>
-</div>
