@@ -1,13 +1,14 @@
 class ItemsController < ApplicationController
 
   def create
-      item = Item.new(params.require(:item).permit(:name))
-      item.user = current_user
-      item.save
+      @item = Item.new(params.require(:item).permit(:name))
+      @item.user = current_user
+      @item.save
       redirect_to :back
+      authorize @item
   end
 
-  
+
   def destroy
     item = Item.find(params[:id])
 
